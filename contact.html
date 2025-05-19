@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SolveIt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SolveIt</h1>
+        <p>We'd love you to share your thoughts!</p>
+		<div id="languageSwitcher">
+			<a href="#" data-lang="en"><img src="english.png" alt="English" class="lang-flag"></a>
+			<a href="#" data-lang="hu"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
+		</div>
+		<div class="header-logo">
+        <img src="digistart.png" alt="SolveIt Logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="solutions.html">Solutions & Tips</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+
+    <section class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+			<br></br>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+			<br></br>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+			<br></br>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Our Contact Information</h2>
+        <p>📍 Address: 2400 Dunaújváros, Táncsics Mihály u. 1/A, Hungary</p>
+        <p>📧 Email: contact@solveit.com</p>
+        <p>📞 Phone: +36 70 525 6969</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SolveIt - All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

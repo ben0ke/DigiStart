@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megoldások & Tippek - SolveIt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SolveIt</h1>
+        <p>Helyi megoldások globális problémákra</p>
+		<div id="languageSwitcher">
+			<a href="#" data-lang="en"><img src="english.png" alt="English" class="lang-flag"></a>
+			<a href="#" data-lang="hu"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
+		</div>
+		<div class="header-logo">
+        <img src="digistart.png" alt="SolveIt Logo">
+    </header>
+	
+	<nav>
+        <a href="index-hu.html">Főoldal</a>
+        <a href="about-hu.html">Rólunk</a>
+        <a href="solutions-hu.html" class="active">Megoldások & Tippek</a>
+        <a href="get-involved-hu.html">Vegye ki a részét!</a>
+        <a href="contact-hu.html">Kapcsolatfelvétel</a>
+    </nav>
+
+    <section class="problems">
+        <h2>Főbb globális problémák és megoldásaik</h2>
+        <div class="problem-list">
+            <div class="problem-card">
+                <h3>🌍 Klímaváltozás</h3>
+                <p>Csökkentse a szénlábnyomot megújuló energia használatával és a kibocsátások csökkentésével.</p>
+            </div>
+            <div class="problem-card">
+                <h3>🏭 Légszennyezés</h3>
+                <p>Csökkentsük a hulladék mennyiségét, hasznosítjuk újra, és kerüljük az egyszer használatos műanyagokat.</p>
+            </div>
+            <div class="problem-card">
+                <h3>💧 Vízhiány</h3>
+                <p>Gyűjtse össze az esővizet, használjon víztakarékos készülékeket.</p>
+            </div>
+            <div class="problem-card">
+                <h3>🌳 Erdőirtás</h3>
+                <p>Ültessen több fát, támogassa az erdőtelepítési programokat.</p>
+            </div>
+            <div class="problem-card">
+                <h3>⚡ Megújuló Energia</h3>
+                <p>Nap-, szél- és vízenergia-megoldások alkalmazása.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-tips">
+        <h2>Kérjen AI-alapú helyi fenntarthatósági tippeket</h2>
+        <button id="generateTips">Generate Tips</button>
+		<div id="tipsContainer"></div>
+        <p id="tipText">Kattintson a gombra a tippért!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SolveIt - Minden jog fenntartva.</p>
+    </footer>
+
+    <script src="solutions.js"></script>
+</body>
+</html>

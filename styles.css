@@ -1,0 +1,220 @@
+/* Root Variables */
+:root {
+    --primary-color: #42721e;
+    --secondary-color: #5f982a;
+    --dark-color: #2c3e50;
+    --light-color: #eef2f3;
+    --hover-color: #2e4412;
+    --header-background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --nav-background: #427019;
+    --footer-background: #3e502c;
+    --transition-time: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+#languageSwitcher {
+    position: absolute;
+    top: 40px;
+    right: 150px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lang-flag {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: transform var(--transition-time);
+}
+
+.lang-flag:hover {
+    transform: scale(1.1);
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: scroll 60s linear infinite;
+    z-index: -1;
+}
+
+.text-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.image {
+    min-width: 75vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+header {
+    background: var(--header-background);
+    color: white;
+    padding: 15px 20px;
+    font-weight: 200;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.header-description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+nav {
+    background: var(--nav-background);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all var(--transition-time) ease-in-out;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.active {
+    background: var(--hover-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mission, .team, .impact {
+    padding: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.member {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform var(--transition-time) ease-in-out;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background var(--transition-time) ease-in-out;
+}
+
+button:hover {
+    background: #325115;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    display: block;
+    visibility: visible;
+    position: relative;
+    background: var(--footer-background);
+    color: white;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+link[rel="icon"] {
+    content: url('solveit.jpg');
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header-logo img {
+        width: 100px; /* Adjust size for smaller screens */
+    }
+
+    .nav a {
+        display: block;
+        margin: 10px 0; /* Stack navigation links */
+    }
+}

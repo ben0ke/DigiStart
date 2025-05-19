@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SolveIt is a community-focused initiative in Dunaújváros, Hungary, dedicated to tackling global challenges like climate change and pollution.">
+    <meta name="keywords" content="SolveIt, sustainability, climate change, pollution, renewable energy">
+    <meta name="author" content="SolveIt Team">
+    <title>Main page - SolveIt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SolveIt</h1>
+        <p>Think Global, Act Local!</p>
+        <div id="languageSwitcher" aria-label="Language Switcher">
+            <a href="#" data-lang="en"><img src="english.png" alt="English" class="lang-flag"></a>
+            <a href="#" data-lang="hu"><img src="hungary.png" alt="Magyar" class="lang-flag"></a>
+        </div>
+        <div class="header-logo">
+            <img src="digistart.png" alt="SolveIt Logo">
+        </div>
+    </header>
+    
+    <nav>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="solutions.html">Solutions & Tips</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+        
+    <main>
+        <div class="background">
+            <div class="image" style="background-image: url('gyar.jpg');" aria-label="Factory Image"></div>
+            <div class="image" style="background-image: url('szemet.jpg');" aria-label="Litter Image"></div>
+            <div class="image" style="background-image: url('szmog.jpg');" aria-label="Smog Image"></div>
+            <div class="image" style="background-image: url('fold.jpg');" aria-label="Earth Image"></div>
+        </div>
+        
+        <div class="text-container">
+            <section class="problems">
+                <h2>Global Issues We Tackle</h2>
+                <div class="problem-list">
+                    <div class="problem-card">🌍 Climate Change</div>
+                    <div class="problem-card">🏭 Pollution</div>
+                    <div class="problem-card">💧 Water Scarcity</div>
+                    <div class="problem-card">🌳 Deforestation</div>
+                    <div class="problem-card">⚡ Renewable Energy</div>
+                </div>
+            </section>
+
+            <section class="tips">
+                <h2>Local Sustainability Tips</h2>
+                <ul>
+                    <li><strong>Support Local Farmers:</strong> Buy locally grown produce to reduce transportation emissions and support sustainable agriculture.</li>
+                    <li><strong>Participate in Community Clean-Ups:</strong> Join local initiatives to keep parks, streets, and waterways free of litter.</li>
+                    <li><strong>Use Public Transportation:</strong> Reduce your carbon footprint by walking, biking, carpooling, or using public transit.</li>
+                    <li><strong>Conserve Water at Home:</strong> Install water-efficient appliances and collect rainwater for gardening.</li>
+                    <li><strong>Promote Green Spaces:</strong> Advocate for more trees, gardens, and parks in your community to enhance biodiversity.</li>
+                    <li><strong>Reduce Local Energy Use:</strong> Encourage your community to switch to LED lighting and implement renewable energy solutions.</li>
+                    <li><strong>Engage in Educational Programs:</strong> Organize or attend workshops on recycling, composting, and sustainable living.</li>
+                    <li><strong>And many more tips!</strong> Check out the <a href="solutions.html">Solutions & Tips</a> tab on our website, and learn more about how you can help our planet!</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 SolveIt - All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('hungarian-flag').addEventListener('click', function() {
+            window.location.href = 'index-hu.html';
+        });
+    </script>
+</body>
+</html>
