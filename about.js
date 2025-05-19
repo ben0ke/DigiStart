@@ -1,9 +1,3 @@
-document.getElementById("moreImpact").addEventListener("click", function() {
-    const impactText = document.getElementById("impactText");
-    impactText.innerText = "We have helped plant over 5,000 trees, reduced local plastic waste by 30%, and educated over 1,000 students on sustainability!";
-    impactText.classList.remove("hidden");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const languageSwitcher = document.querySelectorAll("#languageSwitcher a");
 
