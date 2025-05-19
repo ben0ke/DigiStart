@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const volunteerButton = document.getElementById("volunteerButton");
     const loadMoreEventsButton = document.getElementById("loadMoreEvents");
-    const lang = document.documentElement.getAttribute("data-lang"); // Get the language
+    // Próbáljuk kinyerni a nyelvet az <html> elemből (lang attribútum)
+    const lang = document.documentElement.lang; 
 
     function handleVolunteerClick() {
         const message = lang === "hu"
-            ? "Köszönjük érdeklődését! Hamarosan felvesszük Önnel a kapcsolatot az önkéntes lehetőségekkel kapcsolatban."
-            : "Thank you for your interest! We will contact you with volunteering opportunities soon.";
+            ? "Köszönjük érdeklődését a DigiStart iránt! Hamarosan felvesszük Önnel a kapcsolatot."
+            : "Thank you for your interest in DigiStart! We will contact you soon.";
         alert(message);
     }
 
@@ -14,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const eventsList = document.getElementById("eventsList");
         const newEvents = lang === "hu"
             ? [
-                "🌿 Környezetbarát Műhely - 2025. június 12.",
-                "♻️ Újrahasznosító Akció - 2025. július 8.",
-                "🚲 Autómentes Nap - 2025. augusztus 20."
+                "💡 Digitális Kompetencia Workshop - 2025. június 12.",
+                "📱 Okos Eszközök Napja - 2025. július 8.",
+                "🖥️ Programozás Gyerekeknek - 2025. augusztus 20."
             ]
             : [
-                "🌿 Eco-Friendly Workshop - June 12, 2025",
-                "♻️ Recycling Drive - July 8, 2025",
-                "🚲 Car-Free Day - August 20, 2025"
+                "💡 Digital Skills Workshop - June 12, 2025",
+                "📱 Smart Devices Day - July 8, 2025",
+                "🖥️ Programming for Kids - August 20, 2025"
             ];
 
         newEvents.forEach(event => {
@@ -55,10 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const currentURL = window.location.pathname;
         const fileName = currentURL.substring(currentURL.lastIndexOf("/") + 1);
 
-        if (selectedLang === "hu" && fileName.includes("")) {
+        if (selectedLang === "hu" && !fileName.includes("-hu")) {
             window.location.href = fileName.replace("get-involved.html", "get-involved-hu.html");
-        } else if (selectedLang !== "hu" && fileName.includes("-hu")) {
-            window.location.href = fileName.replace("-hu", "");
+        }
+        else if (selectedLang === "en" && fileName.includes("-hu")) {
+            window.location.href = fileName.replace("get-involved-hu.html", "get-involved.html");
         }
     }
 
@@ -67,4 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-console.log("Script is running!");
+console.log("DigiStart get-involved.js script is running!");
