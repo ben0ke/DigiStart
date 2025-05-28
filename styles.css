@@ -16,8 +16,14 @@
   --transition: 0.2s cubic-bezier(.4,0,.2,1);
 }
 
+.hidden {
+  display: none !important;
+}
+
 html, body {
-  background: var(--bg-primary);
+  background: var(--bg-primary) url('background1.png') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
   color: var(--text-primary);
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -145,7 +151,7 @@ section {
   margin-top: 2rem;
 }
 
-/* Button Styles */
+/* Buttons */
 .btn, .rounded-button {
   display: inline-block;
   font-weight: 600;
@@ -167,19 +173,30 @@ section {
 
 /* Badge */
 .rounded-badge {
-  border-radius: 1em;
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  padding: 0.4em 1.1em;
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--accent-teal);
+  padding: 0.6em 1.6em;
   font-weight: 600;
-  font-size: 0.98rem;
-  border: 1px solid var(--accent-teal);
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+  font-size: 1rem;
+  border: 2px solid var(--accent-teal);
+  margin-right: 0.6em;
+  margin-bottom: 0.6em;
   display: inline-block;
+  transition: all 0.25s ease;
+  text-align: center;
+  text-decoration: none;
+}
+.rounded-badge:hover,
+.rounded-badge:focus {
+  background: var(--accent-gradient);
+  color: var(--text-primary);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(32, 201, 151, 0.25);
 }
 
-/* Cards/Feature Blocks */
+/* Feature Cards */
 .card, .feature-card {
   background: var(--bg-secondary);
   border-radius: var(--card-radius);
@@ -190,7 +207,13 @@ section {
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.card:hover, .feature-card:hover, .card:focus-within, .feature-card:focus-within {
+.card img, .feature-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}
+.card:hover, .feature-card:hover {
   transform: translateY(-4px) scale(1.01);
   box-shadow: 0 14px 40px 0 rgba(13, 110, 253, 0.14);
 }
@@ -203,6 +226,7 @@ section {
   margin-top: 2.2rem;
 }
 
+/* Team Cards */
 .team-card {
   display: flex;
   flex-direction: column;
@@ -244,4 +268,47 @@ footer {
   section { padding: 2.2rem 0.7rem; }
   .hero, .card, .feature-card, .team-card { padding: 1rem 0.8rem; }
   .hero img { max-width: 95vw; }
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+
+/* Link hover for cards */
+.hover-link {
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-link:hover,
+.hover-link:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(32, 201, 151, 0.2);
+  background: rgba(32, 201, 151, 0.05);
+}
+.hover-link h4, .hover-link p {
+  color: var(--text-primary);
+}
+
+/* Aspect Ratio Helpers (Corrected) */
+.aspect-w-16 {
+  position: relative;
+  width: 100%;
+}
+.aspect-w-16::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.aspect-w-16 iframe,
+.aspect-h-9 iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
