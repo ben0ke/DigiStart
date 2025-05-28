@@ -9,45 +9,19 @@
 </head>
 <body>
   <header>
-    <nav aria-label="Main Navigation">
-      <section id="relume" class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18">
-        <div class="mx-auto flex size-full max-w-full items-center justify-between">
-          <a href="#" aria-label="Homepage">
-          </a>
-          <div class="flex flex-col items-center lg:flex-row">
-            <a href="#hero" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base" aria-current="page">Home Page</a>
-            <a href="#initiative" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">About Us</a>
-            <a href="#features" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Our Team</a>
-            <div>
-              <button class="relative flex w-full items-center justify-between py-3 text-md whitespace-nowrap lg:w-auto lg:justify-start lg:gap-2 lg:px-4 lg:py-6 lg:text-base"
-                aria-haspopup="true" aria-expanded="false" aria-controls="resources-menu">
-                <span>Resources</span>
-                <span>
-                  <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.8418 6.86477L7.8418 10.8648C7.64663 11.0496 7.35337 11.0496 7.1582 10.8648L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor"></path>
-                  </svg>
-                </span>
-              </button>
-              <div id="resources-menu" style="display:none;position:absolute;left:0;top:100%;background:var(--bg-secondary);padding:1rem;min-width:200px;box-shadow:var(--shadow);z-index:1001;">
-                <a href="#features" class="block py-2">Features</a>
-                <a href="#initiative" class="block py-2">Initiative</a>
-                <a href="#contact" class="block py-2">Contact</a>
-              </div>
+      <nav aria-label="Main Navigation">
+        <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18">
+          <div class="mx-auto flex size-full max-w-full items-center justify-between">
+            <a href="index.html" aria-label="Homepage" class="active">DigiStart</a>
+            <div class="flex flex-col items-center lg:flex-row">
+              <a href="modules.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Modules</a>
+              <a href="#objectives" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Objectives</a>
+              <a href="#resources" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Resources</a>
             </div>
           </div>
-          <div class="flex items-center gap-4">
-            <button class="rounded-button" title="Join">Join</button>
-            <button class="rounded-button" title="Learn">Learn</button>
-          </div>
-          <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" style="margin-left:1em;">
-            <span class="my-[3px] h-0.5 w-6 bg-black"></span>
-            <span class="my-[3px] h-0.5 w-6 bg-black"></span>
-            <span class="my-[3px] h-0.5 w-6 bg-black"></span>
-          </button>
-        </div>
-      </section>
-    </nav>
-  </header>
+        </section>
+      </nav>
+    </header>
 
   <main>
     <!-- Hero Section -->
@@ -80,8 +54,6 @@
     <section id="initiative">
       <div class="flex min-h-svh flex-col">
         <div class="relative flex-1">
-          <img src="background1.png"
-               alt="DigiStart initiative illustration" class="absolute size-full object-cover" />
         </div>
         <div class="px-[5%]">
           <div class="mx-auto max-w-lg py-12 text-center md:py-16 lg:py-20">
@@ -137,24 +109,65 @@
 
     <!-- Example FAQ Section (Optional) -->
     <section id="faq" class="px-[5%] py-16 md:py-24 lg:py-28">
-      <div class="container">
-        <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl text-center mb-8">Frequently Asked Questions</h3>
-        <div class="faq-list">
+      <div class="container max-w-3xl mx-auto">
+        <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl text-center mb-12">
+          Frequently Asked Questions
+        </h3>
+        <div class="space-y-8">
           <div class="faq-item">
-            <div class="faq-question">What is DigiStart?</div>
-            <div class="faq-answer">DigiStart is an initiative to empower individuals with digital literacy and innovation skills, fostering a community of learners and creators.</div>
+            <h4 class="text-xl font-semibold text-text-primary mb-2">What is DigiStart?</h4>
+            <p class="text-text-secondary leading-relaxed">
+              DigiStart is an initiative to empower individuals with digital literacy and innovation skills,
+              fostering a community of learners and creators.
+            </p>
           </div>
           <div class="faq-item">
-            <div class="faq-question">Who can join DigiStart?</div>
-            <div class="faq-answer">Anyone interested in digital learning and innovation—students, educators, professionals, and enthusiasts—are welcome to join!</div>
+            <h4 class="text-xl font-semibold text-text-primary mb-2">Who can join DigiStart?</h4>
+            <p class="text-text-secondary leading-relaxed">
+              Anyone interested in digital learning and innovation—students, educators, professionals,
+              and enthusiasts—are welcome to join!
+            </p>
           </div>
           <div class="faq-item">
-            <div class="faq-question">How can I get involved?</div>
-            <div class="faq-answer">You can join events, contribute resources, participate in discussions, or collaborate on projects through our platform.</div>
+            <h4 class="text-xl font-semibold text-text-primary mb-2">How can I get involved?</h4>
+            <p class="text-text-secondary leading-relaxed">
+              You can join events, contribute resources, participate in discussions,
+              or collaborate on projects through our platform.
+            </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="px-[5%] py-16 md:py-24 lg:py-28">
+  <div class="container max-w-2xl mx-auto text-center">
+    <h3 class="text-4xl font-bold md:text-5xl lg:text-6xl mb-6">Contact Us</h3>
+    <p class="text-text-secondary mb-12 leading-relaxed">
+      We'd love to hear from you! Whether you have questions, feedback, or just want to say hello.
+    </p>
+    <form class="w-full max-w-lg mx-auto space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-semibold text-text-secondary mb-2">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required
+          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-semibold text-text-secondary mb-2">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required
+          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-semibold text-text-secondary mb-2">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required
+          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]"></textarea>
+      </div>
+      <div class="text-center pt-4">
+        <button type="submit" class="btn rounded-button">Send Message</button>
+      </div>
+    </form>     
+  </div>
+  </section>
   </main>
 
   <footer>
