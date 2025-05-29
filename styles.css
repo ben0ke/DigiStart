@@ -30,25 +30,56 @@
 }
 
 /* Hamburger and mobile nav styles (already present, but ensure these are included) */
-.hamburger,
-.hamburger::before,
-.hamburger::after {
+.hamburger {
   display: block;
-  background: #fff;
-  height: 5px;
-  width: 28px;
-  border-radius: 2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0;
   position: relative;
-  transition: all 0.3s;
+  width: 36px;
+  height: 36px;
+  box-shadow: none;
+  margin: 0 auto;
 }
+
+/* Remove the main bar */
+.hamburger {
+  background: none;
+  height: 36px;
+  width: 36px;
+}
+
+/* Center hamburger bars inside the circle */
 .hamburger::before,
 .hamburger::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: -10px;         /* Move bars more to the center */
+  width: 22px;       /* Shorten bars to fit inside the circle */
+  height: 5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
 }
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
+
+.hamburger::before {
+  top: 11px;         /* Center upper bar vertically */
+  transform: rotate(0deg);
+}
+.hamburger::after {
+  top: 20px;         /* Center lower bar vertically */
+  transform: rotate(0deg);
+}
+
+/* Hamburger open (cross) state */
+.hamburger.open::before {
+  top: 15.5px;
+  transform: rotate(45deg);
+}
+.hamburger.open::after {
+  top: 15.5px;
+  transform: rotate(-45deg);
+}
 
 #nav-links {
   transition: max-height 0.3s;
@@ -62,6 +93,11 @@
     top: 100%;
     left: 0;
     z-index: 1000;
+    background: #111;           /* Add solid background */
+    padding: 1rem 0;            /* Add vertical padding */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18); /* Optional: subtle shadow */
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   #nav-links.open {
     display: flex;

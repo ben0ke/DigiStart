@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   const navToggle = document.getElementById('nav-toggle');
   const navLinksId = document.getElementById('nav-links');
-  if (navToggle && navLinksId) {
+  const hamburger = navToggle ? navToggle.querySelector('.hamburger') : null;
+  if (navToggle && navLinksId && hamburger) {
     navToggle.addEventListener('click', function () {
       navLinksId.classList.toggle('open');
+      hamburger.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', navLinksId.classList.contains('open'));
     });
 
@@ -14,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('click', function (e) {
       if (!navLinksId.contains(e.target) && !navToggle.contains(e.target)) {
         navLinksId.classList.remove('open');
+        hamburger.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       }
     });
     document.addEventListener('keyup', function (e) {
       if (e.key === 'Escape') {
         navLinksId.classList.remove('open');
+        hamburger.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       }
     });
