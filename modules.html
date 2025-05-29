@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8" />
-  <title>DigiStart Course - Digital Knowledge</title>
-  <meta name="description" content="Explore DigiStart's Digital Knowledge course content. Learn core digital concepts, tools, and best practices." />
+  <title>DigiStart kurzus – Digitális tudás</title>
+  <meta name="description" content="Fedezd fel a DigiStart Digitális Tudás kurzus tartalmát. Ismerd meg az alapvető digitális fogalmakat, eszközöket és legjobb gyakorlatokat." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image" href="digistart.ico">
 </head>
-<body>
+<body class="page-fade-in">
   <header>
-    <nav aria-label="Main Navigation">
-      <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18">
+    <!-- Asztali/Tablet Navigáció -->
+    <nav class="navbar-desktop" aria-label="Fő navigáció">
+      <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
         <div class="mx-auto flex size-full max-w-full items-center justify-between">
-          <a href="index.html" aria-label="Homepage">DigiStart</a>
+          <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
           <div class="flex flex-col items-center lg:flex-row">
-            <a href="modules.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Modules</a>
-            <a href="#objectives" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Objectives</a>
-            <a href="#resources" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Resources</a>
+            <a href="modules.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base active">Modulok</a>
+            <a href="objectives.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+            <a href="resources.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Források</a>
+            <a href="team.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Csapat</a>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- Mobil Navigáció -->
+    <nav class="navbar-mobile" aria-label="Mobil navigáció">
+      <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
+        <div class="mx-auto flex size-full max-w-full items-center justify-between">
+          <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
+          <!-- Hamburger ikon mobilra -->
+          <button id="nav-toggle" class="p-2" aria-label="Navigáció megnyitása" aria-expanded="false">
+            <span class="hamburger"></span>
+          </button>
+          <!-- Navigációs linkek -->
+          <div id="nav-links" class="flex flex-col items-center hidden">
+            <a href="modules.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base active">Modulok</a>
+            <a href="objectives.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+            <a href="resources.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Források</a>
           </div>
         </div>
       </section>
@@ -25,118 +46,162 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero px-[5%] py-16 md:py-24 lg:py-28 text-center">
-      <h1 class="text-6xl font-bold md:text-8xl lg:text-9xl mb-6">Digital Knowledge Course</h1>
-      <p class="text-text-secondary max-w-2xl mx-auto md:text-lg">
-        This course equips learners with foundational digital literacy, online tools, safety,
-        and problem-solving skills to thrive in today's connected world.
+    <section class="hero px-[5%] py-12 md:py-20 lg:py-24 text-center fade-in-on-scroll">
+      <h1 class="text-5xl font-bold md:text-7xl lg:text-8xl mb-4">Digitális Tudás Kurzus</h1>
+      <p class="text-text-secondary max-w-2xl mx-auto md:text-lg mb-8">
+        Ez a kurzus alapvető digitális írástudást, online eszközöket, biztonságot és problémamegoldó készségeket ad át, hogy magabiztosan boldogulj a mai digitális világban.
       </p>
-      <div class="mt-10 flex justify-center">
+      <div class="mt-6 flex justify-center">
         <div class="relative inline-block">
           <div class="absolute inset-0 rounded-xl blur-xl opacity-30 bg-[var(--accent-teal)] animate-pulse-slow"></div>
-          <img src="knowledge.png" alt="Digital Knowledge Word Cloud"
-               class="relative rounded-lg shadow-lg max-w-full w-[500px] h-auto z-10" />
+          <img src="knowledge.png" alt="Digitális tudás szófelhő"
+               class="relative rounded-lg shadow-lg max-w-full w-[350px] md:w-[500px] h-auto z-10" />
         </div>
       </div>      
     </section>
     
-
-    <!-- Objectives -->
-    <section id="objectives">
-      <div class="relative bg-[var(--bg-secondary)] bg-opacity-90 backdrop-blur-sm rounded-xl shadow-xl p-10 max-w-3xl mx-auto text-left animate-fade-in border border-transparent"
+    <!-- Célkitűzések -->
+    <section id="objectives" class="px-[5%] py-12 md:py-20 lg:py-24 fade-in-on-scroll">
+      <div class="relative bg-[var(--bg-secondary)] bg-opacity-90 backdrop-blur-sm rounded-xl shadow-xl p-8 md:p-10 max-w-3xl mx-auto text-left border border-transparent"
            style="border-image: linear-gradient(90deg, var(--accent-teal), var(--accent-blue)) 1;">
-        <h2 class="text-4xl font-bold mb-4 text-center">Learning Objectives</h2>
+        <h2 class="text-3xl font-bold mb-4 text-center">Tanulási célok</h2>
         <p class="text-text-secondary mb-6 text-center">
-          By the end of this course, you will be able to:
+          A kurzus végére képes leszel:
         </p>
-        <ul class="space-y-5 list-none text-text-secondary text-lg leading-relaxed pl-0">
+        <ul class="space-y-4 list-none text-text-secondary text-lg leading-relaxed pl-0">
           <li class="flex items-start gap-3">
             <span class="text-[var(--accent-teal)] mt-1">✓</span>
-            <span>Understand core concepts of digital literacy and online citizenship</span>
+            <span>Megérteni a digitális írástudás és az online állampolgárság alapjait</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-[var(--accent-teal)] mt-1">✓</span>
-            <span>Use productivity tools like email, word processors, and cloud storage</span>
+            <span>Használni a produktivitási eszközöket: e-mail, szövegszerkesztő, felhőalapú tárhely</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-[var(--accent-teal)] mt-1">✓</span>
-            <span>Practice safe internet use and manage digital identity</span>
+            <span>Biztonságosan internetezni és kezelni a digitális identitást</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-[var(--accent-teal)] mt-1">✓</span>
-            <span>Recognize reliable digital information sources</span>
+            <span>Felismerni a megbízható digitális információforrásokat</span>
           </li>
         </ul>
       </div>
     </section>    
 
-    <!-- Modules -->
-    <section id="modules" class="mt-16">
+    <!-- Modulok -->
+    <section id="modules" class="px-[5%] py-12 md:py-20 lg:py-24 fade-in-on-scroll">
       <div class="container text-center">
-        <h2 class="text-4xl font-bold mb-10">Course Modules</h2>
+        <h2 class="text-3xl font-bold mb-8">Kurzus moduljai</h2>
         <div class="features-grid">
-    
-          <div class="feature-card card hover-link" data-video="https://www.youtube.com/embed/_LElWqXi7Ag?list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e">
-            <h4>Module 1: Introduction to Digital Literacy</h4>
-            <p>What is digital knowledge, and why is it important?</p>
+
+          <div class="feature-card card hover-link cursor-pointer transition-transform fade-in-on-scroll" data-video="https://www.youtube.com/embed/_LElWqXi7Ag">
+            <h4 class="text-xl font-semibold mb-2">1. modul: Bevezetés a digitális írástudásba</h4>
+            <p>Mi a digitális tudás, és miért fontos?</p>
           </div>
-    
-          <div class="feature-card card hover-link" data-video="https://www.youtube.com/embed/EyQeUwqCDWg?list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e">
-            <h4>Module 2: Productivity & Communication Tools</h4>
-            <p>Learn to use essential software: email, documents, spreadsheets, video calls.</p>
+
+          <div class="feature-card card hover-link cursor-pointer transition-transform fade-in-on-scroll" data-video="https://www.youtube.com/embed/e49iiu5hxZE">
+            <h4 class="text-xl font-semibold mb-2">2. modul: Produktivitási és kommunikációs eszközök</h4>
+            <p>Tanuld meg az alapvető szoftverek használatát: e-mail, dokumentumok, táblázatok, videóhívások.</p>
           </div>
-    
-          <div class="feature-card card hover-link" data-video="https://www.youtube.com/embed/EyQeUwqCDWg?list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e">
-            <h4>Module 3: Internet Safety & Security</h4>
-            <p>Explore safe browsing, strong passwords, scams, and protecting personal data.</p>
+
+          <div class="feature-card card hover-link cursor-pointer transition-transform fade-in-on-scroll" data-video="https://www.youtube.com/embed/ZugGDmneVJ4">
+            <h4 class="text-xl font-semibold mb-2">3. modul: Internetes biztonság és védelem</h4>
+            <p>Biztonságos böngészés, erős jelszavak, csalások felismerése, személyes adatok védelme.</p>
           </div>
-    
-          <div class="feature-card card hover-link" data-video="https://www.youtube.com/embed/sE1Mz8dBFM8">
-            <h4>Module 4: Navigating Information Online</h4>
-            <p>How to identify credible sources, fake news, and use search engines effectively.</p>
+
+          <div class="feature-card card hover-link cursor-pointer transition-transform fade-in-on-scroll" data-video="https://www.youtube.com/embed/EyQeUwqCDWg">
+            <h4 class="text-xl font-semibold mb-2">4. modul: Információkeresés az interneten</h4>
+            <p>Hogyan ismerd fel a hiteles forrásokat, álhíreket, és használd hatékonyan a keresőket.</p>
           </div>
-    
+
         </div>
+        <p class="mt-6 text-text-secondary text-sm">Kattints egy modulra a videó megtekintéséhez!</p>
       </div>
     </section>
 
-    <!-- Video Modal -->
+    <!-- Videó Modal -->
     <div
       id="videoModal"
       class="parent hidden fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
-      <div class="w-full max-w-[90vw] md:w-[800px] lg:w-[1280px] h-auto bg-black rounded-xl overflow-hidden shadow-2xl">
-      <iframe
-        id="videoFrame"
-        class="center w-full aspect-video rounded-lg"
-        src=""
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+      <div class="w-full max-w-[1280px] md:w-[800px] lg:w-[1280px] h-auto bg-black rounded-xl overflow-hidden shadow-2xl relative flex items-center justify-center">
+        <iframe
+          id="videoFrame"
+          class="center rounded-lg"
+          width="1280"
+          height="720"
+          style="aspect-ratio: 16/9; width: 1280px; height: 720px; max-width: 95vw; max-height: 90vh;"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-
-    <!-- Resources -->
-    <section id="resources" class="mt-16">
-      <div class="container text-center">
-        <h2 class="text-4xl font-bold mb-6">Learning Resources</h2>
-        <p class="text-text-secondary mb-8">
-          Download guides, slides, and exercises to complement your learning.
-        </p>
-        <div class="flex justify-center gap-4 flex-wrap">
-          <a href="#" class="rounded-badge">PDF Guide</a>
-          <a href="#" class="rounded-badge">Lesson Slides</a>
-          <a href="#" class="rounded-badge">Practice Exercises</a>
-        </div>
-      </div>
-    </section>
   </main>
-
   <footer class="mt-20">
     <div class="container text-center py-6 text-xs text-gray-500">
-      &copy; 2025 DigiStart. All rights reserved.
+      &copy; 2025 DigiStart. Minden jog fenntartva.
     </div>
   </footer>
   <script src="scripts.js"></script>
+  <script>
+    // Mobil navigációs menü
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.getElementById('nav-toggle');
+      var navLinks = document.getElementById('nav-links');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('hidden');
+        });
+      }
+
+      // Videó modal működés
+      var modal = document.getElementById('videoModal');
+      var frame = document.getElementById('videoFrame');
+      var cards = document.querySelectorAll('.feature-card[data-video]');
+
+      cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+          var videoUrl = card.getAttribute('data-video');
+          if (modal && frame && videoUrl) {
+            frame.src = videoUrl + '?autoplay=1';
+            modal.classList.remove('hidden');
+          }
+        });
+      });
+
+      // Modal bezárása, ha a modal háttérre kattintanak
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            frame.src = '';
+          }
+        });
+      }
+    });
+
+    // Fade-in animáció görgetésre
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll('.fade-in-on-scroll');
+      const options = { threshold: 0.15 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Csak egyszer animál
+          }
+        });
+      }, options);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 </html>

@@ -20,17 +20,127 @@
   display: none !important;
 }
 
-html, body {
-  background: var(--bg-primary) url('background1.png') no-repeat center center fixed;
-  background-size: cover;
-  background-blend-mode: overlay;
+/* Hide mobile navbar by default, show on small screens */
+.navbar-mobile { display: none; }
+.navbar-desktop { display: block; }
+
+@media (max-width: 900px) {
+  .navbar-desktop { display: none !important; }
+  .navbar-mobile { display: block !important; }
+}
+
+/* Hamburger and mobile nav styles (already present, but ensure these are included) */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  background: #fff;
+  height: 5px;
+  width: 28px;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+#nav-links {
+  transition: max-height 0.3s;
+}
+@media (max-width: 900px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  #nav-links.open {
+    display: flex;
+  }
+}
+
+/* Ensure navbar text is visible on black */
+.navbar-desktop a,
+.navbar-mobile a,
+.navbar-desktop .active,
+.navbar-mobile .active {
+  color: #fff !important;
+}
+.navbar-desktop a.active,
+.navbar-mobile a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #00e6c3;
+}
+
+/* Navbar bar size and appearance */
+.navbar-desktop section,
+.navbar-mobile section {
+  min-height: 48px !important;
+  height: 48px !important;
+  padding-top: 1rem !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box;
+}
+
+.navbar-desktop .mx-auto,
+.navbar-mobile .mx-auto {
+  min-height: 48px !important;
+  height: 48px !important;
+  align-items: center;
+}
+
+/* Adjust nav link vertical padding for compact bar */
+.navbar-desktop a,
+.navbar-mobile a {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Hamburger button alignment */
+#nav-toggle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  height: 100%;
+  min-height: 100vh;
   color: var(--text-primary);
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 17px;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-primary) url('background1.png') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 /* Typography */
@@ -68,6 +178,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: #20c997 0px 2px 12px rgba(32, 201, 151, 0.08);
 }
 nav {
   display: flex;
@@ -238,24 +349,97 @@ section {
   box-shadow: var(--shadow);
 }
 .team-card img {
-  width: 78px;
-  height: 78px;
+  width: 480px;
+  height: 480px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid var(--accent-teal);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .team-card img {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* Footer */
 footer {
   width: 100%;
+  background: #111;
+}
+footer .container {
   text-align: center;
-  padding: 2.2rem 0;
-  color: #aaa;
-  font-size: 0.97rem;
-  background: var(--bg-secondary);
-  margin-top: 3rem;
-  border-top: 1px solid #232323;
+}
+
+/* Objectives Section Styling */
+.objectives-section,
+#objectives-section {
+  background: var(--bg-secondary, #181c1f);
+  background-blend-mode: overlay;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 2.5rem 1.5rem;
+  margin: 0 auto;
+  max-width: 700px;
+  border: 1px solid rgba(32,201,151,0.08);
+  animation: fade-in 1s ease;
+}
+
+.objectives-section h1,
+#objectives-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.objectives-section p,
+#objectives-section p {
+  color: var(--text-secondary, #aaa);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.objectives-section ul,
+#objectives-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectives-section li,
+#objectives-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.15rem;
+  color: var(--text-secondary, #b0b0b0);
+  margin-bottom: 1.1rem;
+}
+
+.objectives-section li span:first-child,
+#objectives-section li span:first-child {
+  color: var(--accent-teal, #20c997);
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 0.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .objectives-section,
+  #objectives-section {
+    padding: 1.2rem 0.5rem;
+    border-radius: 0.7rem;
+  }
+  .objectives-section h1,
+  #objectives-section h1 {
+    font-size: 2rem;
+  }
 }
 
 /* ========== Medium Screens (Tablets & Small Laptops) ========== */
@@ -295,6 +479,62 @@ footer {
   }
 }
 
+/* Resource page image sizing */
+.resource-tools img,
+.bg-\[var\(--bg-secondary\)\] img {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.pdf-guide-img {
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.inspiration-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.team-card img{
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  object-fit: cover;
+  border-radius: 12%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .pdf-guide-img {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+  }
+  .inspiration-img {
+    max-width: 95vw;
+  }
+}
 
 /* Animations */
 @keyframes fade-in {
@@ -305,49 +545,87 @@ footer {
   animation: fade-in 1s ease-out both;
 }
 
-/* Link hover for cards */
-.hover-link {
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* --- Animations for all pages --- */
+
+/* Fade-in for main content */
+.page-fade-in {
+  animation: fade-in 0.9s cubic-bezier(.4,0,.2,1) both;
 }
-.hover-link:hover,
-.hover-link:focus {
+
+/* Slide up for sections */
+.section-animate-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: section-up 0.8s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+
+/* Removed duplicate @keyframes fade-in to avoid conflicts */
+
+@keyframes section-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate cards on hover */
+.card, .feature-card, .team-card, .bg-\[var\(--bg-secondary\)\] {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover, .feature-card:hover, .team-card:hover, .bg-\[var\(--bg-secondary\)\]:hover {
+  box-shadow: 0 8px 32px rgba(32,201,151,0.18), 0 1.5px 4px 0 rgba(0,0,0,0.25);
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 14px 40px rgba(32, 201, 151, 0.2);
-  background: rgba(32, 201, 151, 0.05);
-}
-.hover-link h4, .hover-link p {
-  color: var(--text-primary);
 }
 
-/* Aspect Ratio Helpers (Corrected) */
-.aspect-w-16 {
+/* Animate navbar underline */
+.navbar-desktop a.active,
+.navbar-mobile a.active {
   position: relative;
-  width: 100%;
-}
-
-.aspect-w-16 iframe,
-.aspect-h-9 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#videoModal {
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-.video-container {
-  width: 90vw;
-  max-width: 720px;
-  aspect-ratio: 16/9;
-  background: black;
-  border-radius: 1rem;
   overflow: hidden;
 }
+.navbar-desktop a.active::after,
+.navbar-mobile a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-teal);
+  transition: width 0.4s cubic-bezier(.4,0,.2,1), left 0.4s cubic-bezier(.4,0,.2,1);
+}
+.navbar-desktop a.active:focus::after,
+.navbar-desktop a.active:hover::after,
+.navbar-mobile a.active:focus::after,
+.navbar-mobile a.active:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Animate buttons */
+.btn, .rounded-button {
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover, .btn:focus, .rounded-button:hover, .rounded-button:focus {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(32,201,151,0.18);
+}
+
+/* Animate images on load */
+img, iframe {
+  opacity: 0;
+  transform: scale(0.98);
+  animation: img-fade-in 0.8s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+@keyframes img-fade-in {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- End animations --- */
 .parent{
   display: flex;
   justify-content:center;
@@ -355,10 +633,34 @@ footer {
   padding: 10px 0;
 }
 .center {
+  align-items: center !important;
+  justify-content: center !important;
   height: 600px;
-  width: 64%;
-  margin: 5px;
-  border: 1px solid black;
+  width: 100%;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
   border-radius: 0.5rem;
-  padding-left: 17%;
+}
+.navbar-desktop,
+.navbar-mobile {
+  background: #111 !important;
+}
+
+/* Fix navigation bar color difference */
+header,
+.navbar-desktop section,
+.navbar-mobile section {
+  background: #111 !important;
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

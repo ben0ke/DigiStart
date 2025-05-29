@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>DigiStart - Ismerd meg a csapatot</title>
+  <meta name="author" content="DigiStart Team">
+  <meta name="description" content="Ismerd meg a DigiStart csapatát és tudj meg többet a projekt mögött álló emberekről.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image" href="digistart.ico">
+</head>
+<body class="page-fade-in">
+  <header>
+    <nav class="navbar-desktop" aria-label="Fő navigáció">
+      <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
+        <div class="mx-auto flex size-full max-w-full items-center justify-between">
+          <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
+          <div class="flex flex-col items-center lg:flex-row">
+            <a href="modules.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Modulok</a>
+            <a href="objectives.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+            <a href="resources.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Források</a>
+            <a href="team.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base active" aria-current="page">Csapat</a>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <nav class="navbar-mobile" aria-label="Mobil navigáció">
+      <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
+        <div class="mx-auto flex size-full max-w-full items-center justify-between">
+          <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
+          <button id="nav-toggle" class="p-2" aria-label="Navigáció megnyitása" aria-expanded="false">
+            <span class="hamburger"></span>
+          </button>
+          <div id="nav-links" class="flex flex-col items-center hidden">
+            <a href="modules.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Modulok</a>
+            <a href="objectives.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+            <a href="resources.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Források</a>
+            <a href="team.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base active" aria-current="page">Csapat</a>
+          </div>
+        </div>
+      </section>
+    </nav>
+  </header>
+
+  <main>
+    <section class="px-[5%] py-16 md:py-24 lg:py-28 fade-in-on-scroll">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Ismerd meg a csapatot</h1>
+        <p class="text-text-secondary mb-10 text-center">
+          A DigiStart mögött egyetlen egy ember áll, és tömérdek mennyiségű segítség.
+        </p>
+      </div>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Rólam kártya -->
+        <div class="team-card bg-[var(--bg-secondary)] bg-opacity-90 rounded-xl shadow-xl p-8 flex flex-col items-center fade-in-on-scroll">
+          <img src="profile.jpg" alt="Profilkép" class="w-32 h-32 object-cover rounded-full shadow-lg mb-4" loading="lazy">
+          <h2 class="text-2xl font-bold mb-2">Rólam</h2>
+          <p class="text-text-secondary mb-4">
+            Szia! Radványi Bence vagyok, a DigiStart megalkotója és karbantartója. A DigiStart egy izgalmas, de erős idegrendszereket igénylő projekt, amit a DUE Bánki Donát Technikum IKT óra kereti közt hoztam létre. Célom, hogy támogassam a digitális készségek fejlesztését és a technológiai ismeretek bővítését a diákok körében. A DigiStart keretében különböző digitális eszközöket és platformokat használok, hogy interaktív és vonzó tanulási élményeket nyújtsak.
+          </p>
+          <p class="text-text-secondary mb-4">
+            Szoftverfejlesztői oktatásban veszek részt, és örömmel tesztelek olyan eszközöket, amelyek segítik az embereket a tanulásban, fejlődésben és kapcsolatteremtésben. A DigiStart számomra az egyik, ha nem, akkor a legnagyobb projekt, és az informatikai tudásomnak minden részét felhasználtam, hogy ez létrejöhessen. 
+          </p>
+          <ul class="list-disc list-inside text-text-secondary text-left mb-4">
+            <li>Web- és szoftverfejlesztő</li>
+            <li>Villamos hálózat tervező</li>
+            <li>Épület automatika</li>
+            <li>Biztosító szekrény tervezés</li>
+          </ul>
+          <div class="flex gap-4 mt-2">
+            <a href="mailto:info@digistart.com" class="btn rounded-button font-semibold">Kapcsolatfelvétel</a>
+            <a href="https://github.com/ben0ke" target="_blank" rel="noopener" class="btn rounded-button font-semibold">GitHub</a>
+          </div>
+        </div>
+        <!-- További csapattagok ide jöhetnek -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto">
+    <div class="container text-center py-6 text-xs text-gray-500">
+      &copy; 2025 DigiStart. Minden jog fenntartva.
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+  <script>
+    // Mobil navigációs menü
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.getElementById('nav-toggle');
+      var navLinks = document.getElementById('nav-links');
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('hidden');
+        });
+      }
+    });
+
+    // Fade-in animáció görgetésre
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll('.fade-in-on-scroll');
+      const options = { threshold: 0.15 };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Csak egyszer animál
+          }
+        });
+      }, options);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,181 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <title>DigiStart Home</title>
-  <meta name="description" content="DigiStart is an educational and community-driven initiative aimed at empowering individuals through digital literacy, innovation, and accessibility.">
+  <title>DigiStart Kezdőlap</title>
+  <meta name="description" content="A DigiStart egy oktatási és közösségi kezdeményezés, amely a digitális írástudás, innováció és hozzáférhetőség révén segíti az embereket.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image" href="digistart.ico">
 </head>
-<body>
-  <header>
-      <nav aria-label="Main Navigation">
-        <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18">
-          <div class="mx-auto flex size-full max-w-full items-center justify-between">
-            <a href="index.html" aria-label="Homepage" class="active">DigiStart</a>
-            <div class="flex flex-col items-center lg:flex-row">
-              <a href="modules.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Modules</a>
-              <a href="#objectives" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Objectives</a>
-              <a href="#resources" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Resources</a>
-            </div>
-          </div>
-        </section>
-      </nav>
-    </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="px-[5%] py-16 md:py-24 lg:py-28 hero">
-      <div class="container">
-        <div class="flex flex-col items-center">
-          <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
-            <div class="w-full max-w-lg">
-              <h1 class="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
-                Welcome to DigiStart: Ignite Your Digital Journey
-              </h1>
-              <p class="md:text-md">
-                At DigiStart, we are dedicated to transforming the landscape of digital education and innovation. Join us as we empower learners and creators with the tools they need to succeed in a digital world.
-              </p>
-              <div class="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                <button class="rounded-button btn" title="Get Started">Get Started</button>
-                <button class="rounded-button btn" title="Learn More">Learn More</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src="digistart.png"
-                 class="size-full rounded-image object-cover" alt="Digital education community illustration" />
-          </div>
+<body class="page-fade-in">
+<header>
+  <!-- Asztali/Tablet Navigáció -->
+  <nav class="navbar-desktop" aria-label="Fő navigáció">
+    <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary px-[5%] md:min-h-18" style="background:#111;">
+      <div class="mx-auto flex size-full max-w-full items-center justify-between">
+        <a href="index.html" aria-label="Kezdőlap" class="active">DigiStart</a>
+        <div class="flex flex-col items-center lg:flex-row">
+          <a href="modules.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Modulok</a>
+          <a href="objectives.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Célkitűzések</a>
+          <a href="resources.html" class="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base">Források</a>
+          <a href="team.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Csapat</a>
         </div>
       </div>
     </section>
-
-    <!-- Initiative Section -->
-    <section id="initiative">
-      <div class="flex min-h-svh flex-col">
-        <div class="relative flex-1">
+  </nav>
+  <!-- Mobil Navigáció -->
+  <nav class="navbar-mobile" aria-label="Mobil navigáció">
+    <section class="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary px-[5%] md:min-h-18" style="background:#111;">
+      <div class="mx-auto flex size-full max-w-full items-center justify-between">
+        <a href="index.html" aria-label="Kezdőlap" class="active">DigiStart</a>
+        <!-- Hamburger ikon mobilra -->
+        <button id="nav-toggle" class="p-2" aria-label="Navigáció megnyitása" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <!-- Navigációs linkek -->
+        <div id="nav-links" class="flex flex-col items-center hidden">
+          <a href="modules.html" class="relative block w-auto py-3 text-md lg:px-4 lg:py-6 lg:text-base">Modulok</a>
+          <a href="objectives.html" class="relative block w-auto py-3 text-md lg:px-4 lg:py-6 lg:text-base">Célkitűzések</a>
+          <a href="resources.html" class="relative block w-auto py-3 text-md lg:px-4 lg:py-6 lg:text-base">Források</a>
         </div>
-        <div class="px-[5%]">
-          <div class="mx-auto max-w-lg py-12 text-center md:py-16 lg:py-20">
-            <h2 class="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">DigiStart Initiative</h2>
+      </div>
+    </section>
+  </nav>
+</header>
+
+<main>
+  <!-- Hős szekció -->
+  <section id="hero" class="px-[5%] py-16 md:py-24 lg:py-28 hero fade-in-on-scroll">
+    <div class="container">
+      <div class="flex flex-col items-center">
+        <div class="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
+          <div class="w-full max-w-lg">
+            <h1 class="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
+              Üdvözlünk a DigiStarton: Indítsd be a digitális utad!
+            </h1>
             <p class="md:text-md">
-              Empowering digital education through innovation and community engagement for a brighter future.
+              A DigiStart célja, hogy átalakítsa a digitális oktatás és innováció világát. Csatlakozz hozzánk, és szerezz magabiztos digitális tudást, amellyel sikeres lehetsz a modern világban!
             </p>
-            <ul class="mt-5 flex flex-wrap justify-center gap-2 md:mt-6" aria-label="Initiative highlights" style="list-style:none;padding:0;">
-              <li class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-background-secondary text-text-primary">
-                <a href="#">Digital Education</a>
-              </li>
-              <li class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-background-secondary text-text-primary">
-                <a href="#">Innovation Hub</a>
-              </li>
-              <li class="inline-flex items-center rounded-badge px-2 py-1 text-sm font-semibold focus:outline-none border border-transparent bg-background-secondary text-text-primary">
-                <a href="#">Community Impact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="px-[5%] py-16 md:py-24 lg:py-28">
-      <div class="container">
-        <div class="flex flex-col items-start">
-          <div class="rb-12 mb-12 w-full max-w-lg md:mb-18 lg:mb-20">
-            <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl">
-              Explore Our Innovative Features Designed for Your Digital Learning Journey
-            </h3>
-          </div>
-          <div class="features-grid">
-            <div class="feature-card card">
-              <img src="navigation.png" alt="Seamless navigation" class="icon" />
-              <h4>Navigate Seamlessly</h4>
-              <p>Our user-friendly interface and dynamic elements provide an enjoyable, productive experience.</p>
-            </div>
-            <div class="feature-card card">
-              <img src="expert.png" alt="Expert team" class="icon" />
-              <h4>Expert Guidance</h4>
-              <p>Engage with our team of dedicated professionals committed to your success.</p>
-            </div>
-            <div class="feature-card card">
-              <img src="community.png" alt="Community impact" class="icon" />
-              <h4>Community Impact</h4>
-              <p>Join us in making a positive impact on digital education for all.</p>
+            <div class="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
+              <a href="modules.html" class="rounded-button btn" title="Kezdd el">Kezdd el</a>
+              <a href="objectives.html" class="rounded-button btn" title="Tudj meg többet">Tudj meg többet</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Example FAQ Section (Optional) -->
-    <section id="faq" class="px-[5%] py-16 md:py-24 lg:py-28">
-      <div class="container max-w-3xl mx-auto">
-        <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl text-center mb-12">
-          Frequently Asked Questions
-        </h3>
-        <div class="space-y-8">
-          <div class="faq-item">
-            <h4 class="text-xl font-semibold text-text-primary mb-2">What is DigiStart?</h4>
-            <p class="text-text-secondary leading-relaxed">
-              DigiStart is an initiative to empower individuals with digital literacy and innovation skills,
-              fostering a community of learners and creators.
-            </p>
-          </div>
-          <div class="faq-item">
-            <h4 class="text-xl font-semibold text-text-primary mb-2">Who can join DigiStart?</h4>
-            <p class="text-text-secondary leading-relaxed">
-              Anyone interested in digital learning and innovation—students, educators, professionals,
-              and enthusiasts—are welcome to join!
-            </p>
-          </div>
-          <div class="faq-item">
-            <h4 class="text-xl font-semibold text-text-primary mb-2">How can I get involved?</h4>
-            <p class="text-text-secondary leading-relaxed">
-              You can join events, contribute resources, participate in discussions,
-              or collaborate on projects through our platform.
-            </p>
-          </div>
+        <div>
+          <img src="digistart.png"
+               class="size-full rounded-image object-cover" alt="Digitális oktatási közösség illusztráció" />
         </div>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-<section id="contact" class="px-[5%] py-16 md:py-24 lg:py-28">
-  <div class="container max-w-2xl mx-auto text-center">
-    <h3 class="text-4xl font-bold md:text-5xl lg:text-6xl mb-6">Contact Us</h3>
-    <p class="text-text-secondary mb-12 leading-relaxed">
-      We'd love to hear from you! Whether you have questions, feedback, or just want to say hello.
-    </p>
-    <form class="w-full max-w-lg mx-auto space-y-6">
-      <div>
-        <label for="name" class="block text-sm font-semibold text-text-secondary mb-2">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required
-          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]" />
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-semibold text-text-secondary mb-2">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required
-          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]" />
-      </div>
-      <div>
-        <label for="message" class="block text-sm font-semibold text-text-secondary mb-2">Your Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required
-          class="block w-full p-3 rounded-md bg-[var(--bg-secondary)] border border-gray-700 text-text-primary focus:outline-none focus:ring-2 focus:ring-[var(--accent-teal)]"></textarea>
-      </div>
-      <div class="text-center pt-4">
-        <button type="submit" class="btn rounded-button">Send Message</button>
-      </div>
-    </form>     
-  </div>
-  </section>
-  </main>
-
-  <footer>
-    <div class="container text-center py-6 text-xs text-gray-500">
-      &copy; 2025 DigiStart. All rights reserved.
     </div>
-  </footer>
+  </section>
 
-  <script src="scripts.js"></script>
+  <!-- Fő funkciók szekció -->
+  <section id="features" class="px-[5%] py-16 md:py-24 lg:py-28 fade-in-on-scroll">
+    <div class="container">
+      <div class="flex flex-col items-start">
+        <div class="rb-12 mb-12 w-full max-w-lg md:mb-18 lg:mb-20">
+          <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl">
+            Fedezd fel innovatív funkcióinkat, amelyek támogatják digitális tanulásod!
+          </h3>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card card fade-in-on-scroll">
+            <img src="navigation.png" alt="Könnyű navigáció" class="icon" />
+            <h4>Könnyű navigáció</h4>
+            <p>Felhasználóbarát felület és dinamikus elemek a gördülékeny élményért.</p>
+          </div>
+          <div class="feature-card card fade-in-on-scroll">
+            <img src="expert.png" alt="Szakértői csapat" class="icon" />
+            <h4>Szakértői támogatás</h4>
+            <p>Elkötelezett szakemberek segítenek a sikeredben.</p>
+          </div>
+          <div class="feature-card card fade-in-on-scroll">
+            <img src="community.png" alt="Közösségi hatás" class="icon" />
+            <h4>Közösségi hatás</h4>
+            <p>Csatlakozz hozzánk, és tegyünk együtt a digitális oktatásért!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GYIK szekció -->
+  <section id="faq" class="px-[5%] py-16 md:py-24 lg:py-28 fade-in-on-scroll">
+    <div class="container max-w-3xl mx-auto">
+      <h3 class="text-4xl leading-[1.2] font-bold md:text-5xl lg:text-6xl text-center mb-12">
+        Gyakran Ismételt Kérdések
+      </h3>
+      <div class="space-y-8">
+        <div class="faq-item fade-in-on-scroll">
+          <h4 class="text-xl font-semibold text-text-primary mb-2">Mi az a DigiStart?</h4>
+          <p class="text-text-secondary leading-relaxed">
+            A DigiStart egy kezdeményezés, amely a digitális írástudás és innováció fejlesztését tűzte ki célul, közösséget építve tanulók és alkotók számára.
+          </p>
+        </div>
+        <div class="faq-item fade-in-on-scroll">
+          <h4 class="text-xl font-semibold text-text-primary mb-2">Ki csatlakozhat a DigiStarthoz?</h4>
+          <p class="text-text-secondary leading-relaxed">
+            Bárki, aki érdeklődik a digitális tanulás és innováció iránt – diákok, tanárok, szakemberek és lelkes érdeklődők egyaránt!
+          </p>
+        </div>
+        <div class="faq-item fade-in-on-scroll">
+          <h4 class="text-xl font-semibold text-text-primary mb-2">Hogyan kapcsolódhatok be?</h4>
+          <p class="text-text-secondary leading-relaxed">
+            Részt vehetsz eseményeken, megoszthatsz forrásokat, bekapcsolódhatsz a közösségi beszélgetésekbe vagy együttműködhetsz projekteken keresztül.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center py-6 text-xs text-gray-500">
+    &copy; 2025 DigiStart. Minden jog fenntartva.
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+  // Mobil navigációs menü
+  document.addEventListener('DOMContentLoaded', function() {
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function() {
+        var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('hidden');
+      });
+    }
+  });
+
+  // Fade-in animáció görgetésre
+  document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll('.fade-in-on-scroll');
+    const options = { threshold: 0.15 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Csak egyszer animál
+        }
+      });
+    }, options);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+</script>
 </body>
 </html>

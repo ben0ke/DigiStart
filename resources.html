@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>DigiStart - Tanulási források</title>
+    <meta name="description" content="Válogatott digitális írástudási források: útmutatók, videók és eszközök a digitális készségek fejlesztéséhez.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image" href="digistart.ico">
+</head>
+<body class="page-fade-in">
+    <header>
+        <!-- Asztali/Tablet Navigáció -->
+        <nav class="navbar-desktop" aria-label="Fő navigáció">
+            <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
+                <div class="mx-auto flex size-full max-w-full items-center justify-between">
+                    <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
+                    <div class="flex flex-col items-center lg:flex-row">
+                        <a href="modules.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Modulok</a>
+                        <a href="objectives.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+                        <a href="resources.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base active" aria-current="page">Források</a>
+                        <a href="team.html" class="relative block w-auto py-2 text-md lg:inline-block lg:px-4 lg:py-3 lg:text-base">Csapat</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+        <!-- Mobil Navigáció -->
+        <nav class="navbar-mobile" aria-label="Mobil navigáció">
+            <section class="relative z-[999] flex min-h-12 w-full items-center border-b border-border-primary px-[5%]" style="background:#111;">
+                <div class="mx-auto flex size-full max-w-full items-center justify-between">
+                    <a href="index.html" aria-label="Kezdőlap" class="font-bold text-lg text-white">DigiStart</a>
+                    <button id="nav-toggle" class="p-2" aria-label="Navigáció megnyitása" aria-expanded="false" aria-controls="nav-links">
+                        <span class="hamburger"></span>
+                    </button>
+                    <div id="nav-links" class="flex flex-col items-center hidden">
+                        <a href="modules.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Modulok</a>
+                        <a href="objectives.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base">Célkitűzések</a>
+                        <a href="resources.html" class="relative block w-auto py-2 text-md lg:px-4 lg:py-3 lg:text-base active" aria-current="page">Források</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main id="main-content" class="flex-1">
+        <section class="px-[5%] py-16 md:py-24 lg:py-28 fade-in-on-scroll">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-center">Tanulási források</h1>
+                <p class="text-text-secondary mb-10 text-center">
+                    Fedezd fel válogatott útmutatóinkat, videóinkat és eszközeinket, hogy magabiztosan fejleszd digitális készségeidet és biztonságban maradj az interneten!
+                </p>
+
+                <!-- Kiemelt PDF Útmutató -->
+                <div class="bg-[var(--bg-secondary)] bg-opacity-90 rounded-xl shadow-xl p-6 md:p-8 mb-10 flex flex-col md:flex-row gap-8 border border-transparent items-center md:items-start fade-in-on-scroll">
+                    <img src="pdf-guide.png" alt="Digitális írástudás PDF útmutató" class="w-32 h-32 object-contain rounded-lg shadow-md mb-4 md:mb-0" loading="lazy">
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold mb-2">Digitális írástudás útmutató (PDF)</h2>
+                        <p class="text-text-secondary mb-3">
+                            Töltsd le átfogó digitális írástudás útmutatónkat, amely gyakorlati tippekkel és lépésről lépésre követhető tanácsokkal segít a biztonságos és hatékony internethasználatban.
+                        </p>
+                        <a href="https://inhope.org/media/pages/articles/the-inhope-digital-literacy-guide/4816f047fc-1726756077/inhope-digital-literacy-guide.pdf" class="btn rounded-button font-semibold" target="_blank" rel="noopener noreferrer">PDF letöltése</a>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Videólejátszási lista -->
+                <div class="bg-[var(--bg-secondary)] bg-opacity-90 rounded-xl shadow-xl p-6 md:p-8 mb-10 flex flex-col md:flex-row gap-8 border border-transparent items-center md:items-start fade-in-on-scroll">
+                    <img src="video-playlist.png" alt="Digitális készségek lejátszási lista" class="w-72 h-44 object-cover rounded-lg shadow-md mb-4 md:mb-0" loading="lazy">
+                    <div class="flex-1">
+                        <iframe width="360" height="215" src="https://www.youtube.com/embed/videoseries?list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e" title="Digitális készségek lejátszási lista" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="rounded-lg shadow-md mb-4"></iframe>
+                        <ul class="list-disc list-inside text-text-secondary text-lg space-y-2 mt-4">
+                            <li>Bevezetés a digitális írástudásba</li>
+                            <li>Produktivitási és kommunikációs eszközök</li>
+                            <li>Internetes biztonság és védelem</li>
+                            <li>Információkeresés az interneten</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hasznos eszközök és linkek -->
+                <div class="bg-[var(--bg-secondary)] bg-opacity-90 rounded-xl shadow-xl p-6 md:p-8 mb-10 fade-in-on-scroll">
+                    <h2 class="text-2xl font-bold mb-4">Hasznos eszközök és weboldalak</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex gap-4 items-center">
+                            <img src="office.png" alt="Microsoft Office" class="w-12 h-12 object-contain rounded" loading="lazy">
+                            <div>
+                                <a href="https://www.office.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent-teal)] underline">Microsoft Office Online</a>
+                                <p class="text-text-secondary text-sm">Ingyenes online Word, Excel, PowerPoint és további alkalmazások.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <img src="google-drive.png" alt="Google Drive" class="w-12 h-12 object-contain rounded" loading="lazy">
+                            <div>
+                                <a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent-teal)] underline">Google Drive</a>
+                                <p class="text-text-secondary text-sm">Felhőalapú tárhely és dokumentumkezelés.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <img src="firefox.png" alt="Mozilla Firefox" class="w-12 h-12 object-contain rounded" loading="lazy">
+                            <div>
+                                <a href="https://www.mozilla.org/firefox/new/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent-teal)] underline">Mozilla Firefox</a>
+                                <p class="text-text-secondary text-sm">Biztonságos és privát böngésző.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <img src="safe-browsing.png" alt="Google Safe Browsing" class="w-12 h-12 object-contain rounded" loading="lazy">
+                            <div>
+                                <a href="https://safebrowsing.google.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[var(--accent-teal)] underline">Google Safe Browsing</a>
+                                <p class="text-text-secondary text-sm">Ellenőrizd, hogy egy weboldal biztonságos-e.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inspiráló kép -->
+                <div class="my-12 flex flex-col items-center justify-center text-center fade-in-on-scroll">
+                    <img src="digital-learning.png" alt="Digitális tanulás inspiráció" class="mx-auto inspiration-img rounded-xl shadow-lg mb-6" loading="lazy">
+                    <p class="text-text-secondary mt-2 text-lg mb-4">Fejleszd magad digitális készségekkel a jövődért!</p>
+                    <div class="mt-2">
+                        <span class="block font-bold text-2xl text-[var(--accent-teal)]">DigiStart</span>
+                        <span class="block text-text-secondary text-base italic">Indítsd be a digitális utad!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-auto">
+        <div class="container text-center py-6 text-xs text-gray-500">
+            &copy; 2025 DigiStart. Minden jog fenntartva.
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script>
+      // Mobil navigációs menü
+      document.addEventListener('DOMContentLoaded', function() {
+        var navToggle = document.getElementById('nav-toggle');
+        var navLinks = document.getElementById('nav-links');
+        if (navToggle && navLinks) {
+          navToggle.addEventListener('click', function() {
+            var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('hidden');
+          });
+        }
+      });
+
+      // Fade-in animáció görgetésre
+      document.addEventListener("DOMContentLoaded", function() {
+        const faders = document.querySelectorAll('.fade-in-on-scroll');
+        const options = { threshold: 0.15 };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target); // Csak egyszer animál
+            }
+          });
+        }, options);
+
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
+        });
+      });
+    </script>
+</body>
+</html>
