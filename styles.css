@@ -54,7 +54,7 @@
 .hamburger::after {
   content: '';
   position: absolute;
-  left: -10px;         /* Move bars more to the center */
+  left: -10.7px;         /* Move bars more to the center */
   width: 22px;       /* Shorten bars to fit inside the circle */
   height: 5px;
   background: #fff;
