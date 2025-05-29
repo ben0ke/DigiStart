@@ -47,6 +47,10 @@
   background: none;
   height: 36px;
   width: 36px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Center hamburger bars inside the circle */
@@ -54,7 +58,9 @@
 .hamburger::after {
   content: '';
   position: absolute;
-  left: -10.7px;         /* Move bars more to the center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 22px;       /* Shorten bars to fit inside the circle */
   height: 5px;
   background: #fff;
